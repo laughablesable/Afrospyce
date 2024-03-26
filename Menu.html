@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Afrospyce Kitchen - Menu</title>
+    <style>
+        /* Additional CSS for Apple-like design */
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #111;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .menu-section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .menu-item {
+            display: inline-block;
+            width: 300px;
+            margin: 20px;
+            border: 1px solid green;
+            border-radius: 5px;
+            background-color: black;
+            padding: 20px;
+            text-align: left;
+			color: white;
+        }
+
+        .menu-item img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .menu-item .item-details {
+            margin-top: 20px;
+        }
+
+        .menu-item h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .menu-item p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .menu-item .price {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #111;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            font-size: 14px;
+            margin: 0;
+        }
+
+        /* Additional styles for the cart summary section */
+        .cart-summary {
+            background-color: black;
+            padding: 20px;
+            margin-top: 20px;
+            border-top: 1px solid #ccc;
+        }
+
+        .cart-summary input[type="text"] {
+            width: calc(50% - 10px);
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+
+        .cart-summary button {
+            padding: 10px 20px;
+            background-color: #111;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+		.cart-section {
+            min-height: 300px; /* Set a minimum height for the cart section */
+        }
+        footer {
+            position: relative; /* Make the footer relative */
+            z-index: 1; /* Ensure footer appears above other content */
+        }
+    </style>
+</head>
+
+<body class="menu">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="menu.html" class="active">Menu</a></li>
+                <li><a href="catering.html">Catering</a></li>
+            </ul>
+        </nav>
+    </header>
+
+     <section class="menu" id="menu">
+        
+        <div id="meal1" class="menu-item">
+            <img src="jollof_rice.jpg" alt="Spicy Jollof Rice">
+            <div class="item-details">
+                <h3>Spicy Jollof Rice</h3>
+                <p>Delicious and flavorful Jollof rice with a spicy kick.</p>
+                Price:<p class="price" id="meal1-price">10</p>
+                <div class="counter">
+                    <button onclick="decrement('meal1')">-</button>
+                    <input type="text" id="meal1-counter" value="0" readonly>
+                    <button onclick="increment('meal1')">+</button>
+                </div>
+                <button onclick="addToCart('meal1')">Add to Cart</button>
+                 <button class="remove-button" onclick="removeFromCart('meal1')">Remove from Cart</button>
+            </div>
+        </div>
+
+        <div id="meal2" class="menu-item">
+            <img src="suya_skewers.jpg" alt="Suya Skewers">
+            <div class="item-details">
+                <h3>Naija Suya</h3>
+                <p>Grilled meat seasoned with spicy suya spice blend.</p>
+               Price: <p class="price" id="meal2-price">12</p>
+                <div class="counter">
+                    <button onclick="decrement('meal2')">-</button>
+                    <input type="text" id="meal2-counter" value="0" readonly>
+                    <button onclick="increment('meal2')">+</button>
+                </div>
+                <button onclick="addToCart('meal2')">Add to Cart</button>
+                 <button class="remove-button" onclick="removeFromCart('meal2')">Remove from Cart</button>
+            </div>
+        </div>
+
+        <div id="meal3" class="menu-item">
+            <img src="shawarma.JPG" alt="Shawarma">
+            <div class="item-details">
+                <h3>Naija Shawarma</h3>
+                <p>Naija Chicken Shawarma packed with bright, delicious flavors and contrasting textures with vegetables</p>
+              Price:  <p class="price" id="meal3-price">15</p>
+                <div class="counter">
+                    <button onclick="decrement('meal3')">-</button>
+                    <input type="text" id="meal3-counter" value="0" readonly>
+                    <button onclick="increment('meal3')">+</button>
+                </div>
+                <button onclick="addToCart('meal3')">Add to Cart</button>
+                 <button class="remove-button" onclick="removeFromCart('meal3')">Remove from Cart</button>
+            </div>
+        </div>
+
+        <div id="meal4" class="menu-item">
+            <img src="plantain_fries.JPG" alt="Plantain Fries">
+            <div class="item-details">
+                <h3>Plantain Fries</h3>
+                <p>Perfectly crispy, delicious plantain fries. The light spice in these fries allows you to savor the subtle taste of the plantain.</p>
+             Price:   <p class="price" id="meal4-price">8</p>
+                <div class="counter">
+                    <button onclick="decrement('meal4')">-</button>
+                    <input type="text" id="meal4-counter" value="0" readonly>
+                    <button onclick="increment('meal4')">+</button>
+                </div>
+                <button onclick="addToCart('meal4')">Add to Cart</button>
+                 <button class="remove-button" onclick="removeFromCart('meal4')">Remove from Cart</button>
+            </div>
+			
+        </div>
+<section class="cart-section">
+        <!-- Customer information form -->
+        <form id="customer-info">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="text" id="address" placeholder="Your Address" required>
+			 <button onclick="sendOrder()">Checkout</button>
+        </form>
+
+        <!-- Display selected items and total price -->
+        <div id="cart-summary"></div>
+
+        <!-- Button to send order -->
+       
+    </section>
+    </section>
+    
+<!-- Cart section -->
+    
+
+    <footer>
+        <p>&copy; 2024 Afrospyce Kitchen. All rights reserved.</p>
+    </footer>
+
+    <!-- Script for menu functionality -->
+    <script src="script.js"></script>
+</body>
+</html>

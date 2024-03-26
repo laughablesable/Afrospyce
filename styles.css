@@ -1,0 +1,150 @@
+/* styles.css */
+
+/* Global Styles */
+body {
+    font-family: 'EB Garamond';
+    margin: 0;
+    padding: 0; 
+	 overflow-x: hidden; /* Ensure content doesn't overflow horizontally */
+    background: linear-gradient(to right, #008751, #FFFFFF, #008751); /* Shades of green and white */
+    background-size: 200% auto;
+    animation: gradientMorph 10s ease infinite alternate-reverse; /* Alternate between forward and reverse animation */
+    color: #fff; /* Text color */
+}
+
+/* Animation for gradient background */
+@keyframes gradientMorph {
+    0% {
+        background-position: 0% center;
+    }
+    100% {
+        background-position: 100% center;
+    }
+}
+
+header {
+    background-color: #f8f8f8;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+nav ul li a.active {
+    font-weight: bold;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.menu-item {
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+}
+
+.item-details {
+    padding: 10px;
+}
+
+.item-details h3 {
+    margin-top: 0;
+}
+
+.counter {
+    margin-top: 10px;
+}
+
+.counter button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.counter input {
+    width: 40px;
+    text-align: center;
+}
+
+.checkout {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.contact-box {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.contact-box input,
+.contact-box textarea,
+.contact-box button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 80%;
+    max-width: 400px;
+}
+
+.contact-box button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-box button:hover {
+    background-color: #555;
+}
+
+/* Page-Specific Styles */
+body.index {
+    background-color: #f0f0f0;
+}
+
+body.about {
+    background-color: #fafafa;
+}
+
+body.menu {
+    background-color: #f8f8f8;
+}
+
+body.catering {
+    background-color: #fcfcfc;
+}
+
+.intro {
+    padding: 50px;
+    text-align: center;
+}
+
+.intro a {
+    color: #333;
+    font-weight: bold;
+}
+
+.catering-section {
+    padding: 50px;
+    text-align: center;
+}

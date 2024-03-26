@@ -1,0 +1,177 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Afrospyce Kitchen - Catering Services</title>
+    <style>
+        /* Additional CSS for Apple-like design */
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #111;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .catering-section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .catering-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .catering-section p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .menu-item {
+            display: inline-block;
+            width: 300px;
+            margin: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            padding: 20px;
+            text-align: left;
+        }
+
+        .menu-item img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .menu-item .item-details {
+            margin-top: 20px;
+        }
+
+        .menu-item h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .menu-item p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #111;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            font-size: 14px;
+            margin: 0;
+        }
+    </style>
+</head>
+<body class="catering">
+    <header>
+        <h1>Catering Services</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="catering.html" class="active">Catering</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="catering-section">
+        <h2>Large Scale Catering</h2>
+        <p>Let Afrospyce Kitchen cater your next event!</p>
+        <p>Whether it's a wedding, corporate event, or family gathering, we offer delicious Nigerian cuisine that will impress your guests.</p>
+        <p>Contact us today to discuss your catering needs.</p>
+    </section>
+
+    <section class="menu">
+        <div class="menu-item" id="cateringItem1">
+            <img src="cateringImage1.jpg" alt="Catering Item 1">
+            <div class="item-details">
+                <h3>Catering Item 1</h3>
+                <p>Description of Catering Item 1</p>
+            </div>
+        </div>
+        
+        <div class="menu-item" id="cateringItem2">
+            <img src="cateringImage2.jpg" alt="Catering Item 2">
+            <div class="item-details">
+                <h3>Catering Item 2</h3>
+                <p>Description of Catering Item 2</p>
+            </div>
+        </div>
+
+        <div class="menu-item" id="cateringItem3">
+            <img src="cateringImage3.jpg" alt="Catering Item 3">
+            <div class="item-details">
+                <h3>Catering Item 3</h3>
+                <p>Description of Catering Item 3</p>
+            </div>
+        </div>
+        
+        <div class="menu-item" id="cateringItem4">
+            <img src="cateringImage4.jpg" alt="Catering Item 4">
+            <div class="item-details">
+                <h3>Catering Item 4</h3>
+                <p>Description of Catering Item 4</p>
+            </div>
+        </div>
+        
+        <div class="menu-item" id="cateringItem5">
+            <img src="cateringImage5.jpg" alt="Catering Item 5">
+            <div class="item-details">
+                <h3>Catering Item 5</h3>
+                <p>Description of Catering Item 5</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-box">
+        <h2>Contact Us</h2>
+        <p>Have questions or want to book our catering services?</p>
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="button" id="sendMessageBtn">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Afrospyce Kitchen. All rights reserved.</p>
+    </footer>
+</body>
+</html>

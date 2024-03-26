@@ -11,7 +11,19 @@ body {
     animation: gradientMorph 5s ease infinite alternate-reverse; /* Alternate between forward and reverse animation */
     color: #fff; /* Text color */
 }
-
+button {
+    background-color: #4CAF50; /* Green background color */
+    border: none; /* Remove border */
+    color: white; /* White text color */
+    padding: 10px 20px; /* Padding */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Make display inline block */
+    font-size: 16px; /* Font size */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Add cursor pointer */
+    transition: background-color 0.3s; /* Add transition */
+}
 /* Animation for gradient background */
 @keyframes gradientMorph {
     0% {

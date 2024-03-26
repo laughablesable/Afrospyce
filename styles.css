@@ -6,7 +6,7 @@ body {
     margin: 0;
     padding: 0; 
 	 overflow-x: hidden; /* Ensure content doesn't overflow horizontally */
-    background: linear-gradient(to right, #008751, #FFFFFF, #008751); /* Shades of green and white */
+    background: linear-gradient(to right, green, #FFFFFF, green); /* Shades of green and white */
     background-size: 200% auto;
     animation: gradientMorph 5s ease infinite alternate-reverse; /* Alternate between forward and reverse animation */
     color: #fff; /* Text color */

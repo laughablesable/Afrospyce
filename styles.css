@@ -8,7 +8,7 @@ body {
 	 overflow-x: hidden; /* Ensure content doesn't overflow horizontally */
     background: linear-gradient(to right, green, #FFFFFF, green); /* Shades of green and white */
     background-size: 200% auto;
-    animation: gradientMorph 5s ease infinite alternate-reverse; /* Alternate between forward and reverse animation */
+    animation: gradientMorph 3s ease infinite alternate-reverse; /* Alternate between forward and reverse animation */
     color: #fff; /* Text color */
 }
 button {

@@ -129,6 +129,25 @@ function scrollToCartSummary() {
     const cartSummarySection = document.getElementById('cart-summary');
     cartSummarySection.scrollIntoView({ behavior: 'smooth' });
 }
+// Function to send a message from the contact form
+function sendEmail() {
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    if (name.trim() !== '' && email.trim() !== '' && message.trim() !== '') {
+        const recipientEmail = 'asoneye34@gmail.com';
+        const subject = 'Message from Afrospyce Kitchen';
+        const body = `Name: ${name}\nEmail: ${email}\n\nMessage: ${message}`;
+        const mailtoLink = `mailto:${recipientEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        window.location.href = mailtoLink;
+    } else {
+        alert('Please fill out all fields before sending.');
+    }
+}
+
+// Event listener for the send button
+document.getElementById("sendMessageBtn").addEventListener("click", sendEmail);
 
 
 // Function to send the order summary via email

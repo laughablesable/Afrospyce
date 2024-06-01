@@ -179,25 +179,18 @@
             text-align: center;
         }
           @media (max-width: 768px) {
-            body {
-                flex-direction: row;
-                flex-wrap: nowrap;
-                overflow-x: auto;
-            }
-
             .info {
-                display: inline-block;
-                width: auto;
+                flex-direction: column;
+                align-items: center;
             }
 
             .contact-form, .description {
-                width: auto;
-               display: inline-block;
+                width: 90%;
+                margin: 10px 0;
             }
 
-            header, footer, main {
-                flex: 0 0 auto;
-                width: auto;
+            header, footer {
+                width: 100%;
             }
         }
     </style>

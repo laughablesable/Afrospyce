@@ -2,11 +2,18 @@
 
 /* Global Styles */
 body {
+ margin: 0;
+    padding: 0; 
+	 overflow-x: hidden; /* Ensure content doesn't overflow horizontally */
+    background: linear-gradient(to right, green, #FFFFFF, green); /* Shades of green and white */
+    background-size: 200% auto;
+    animation: gradientMorph 3s ease infinite alternate-reverse; /* Alternate between forward and reverse animation */
+    color: #fff; /* Text color */
 
             font-family: 'Roboto', sans-serif;
             font-weight: 100;
             line-height: 1.6;
-            color: #333;
+            
         }
 
         h1, h2, h3, h4, h5, h6, p, a, li, span, div, input, textarea, button {
@@ -38,14 +45,7 @@ body {
         button:hover {
             background-color: #6C757D;
         }
-    margin: 0;
-    padding: 0; 
-	 overflow-x: hidden; /* Ensure content doesn't overflow horizontally */
-    background: linear-gradient(to right, green, #FFFFFF, green); /* Shades of green and white */
-    background-size: 200% auto;
-    animation: gradientMorph 3s ease infinite alternate-reverse; /* Alternate between forward and reverse animation */
-    color: #fff; /* Text color */
-}
+   
 button {
     background-color: #4CAF50; /* Green background color */
     border: none; /* Remove border */

@@ -178,15 +178,27 @@
             color: red;
             text-align: center;
         }
-          @media (min-width: 768px) {
+          @media (max-width: 768px) {
             body {
-                display: flex;
                 flex-direction: row;
-                max-width: 1200px;
+                flex-wrap: nowrap;
+                overflow-x: auto;
+            }
+
+            .info {
+                flex-direction: row;
+                flex-wrap: nowrap;
+                width: auto;
             }
 
             .contact-form, .description {
-                width: 45%;
+                width: auto;
+                flex: 0 0 auto;
+            }
+
+            header, footer, main {
+                flex: 0 0 auto;
+                width: auto;
             }
         }
     </style>

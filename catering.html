@@ -6,7 +6,7 @@
     <style>
         /* Additional CSS for Apple-like design */
      body {
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            
             background-color: #f8f8f8;
             color: white;
           
@@ -175,9 +175,16 @@
         <img src="placeholder2.JPG" alt="Catering Item 1">
             </div>
         </div>
-    <section class="catering-section">
-       
-    </section>
+   <div class="menu-item">
+        <h2>Contact Us for Catering</h2>
+        <br> <img src="placeholder1.JPG" alt="Catering Item 1"><br>
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+        <button id="sendMessageBtn">Send Message</button>
+        <div class="message" id="messageDisplay"></div>
+    </div>
+
 
     <section class="menu">
         <div class="menu-item" id="cateringItem1">
@@ -228,16 +235,7 @@
         </div>
     </section>
 
-    <div class="contact-form">
-        <h2>Contact Us for Catering</h2>
-        <br> <img src="placeholder1.JPG" alt="Catering Item 1"><br>
-        <input type="text" id="name" placeholder="Your Name" required>
-        <input type="email" id="email" placeholder="Your Email" required>
-        <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
-        <button id="sendMessageBtn">Send Message</button>
-        <div class="message" id="messageDisplay"></div>
-    </div>
-
+    
     <script>
         // Function to send a message from the contact form via mailto link
         function sendEmail() {

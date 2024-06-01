@@ -173,20 +173,40 @@
         </div>
     </section>
 
-    <section class="contact-box">
-        <h2>Contact Us</h2>
-        <p>Have questions or want to book our catering services?</p>
-        <form id="contactForm">
-            <input type="text" id="name" placeholder="Your Name" required>
-            <input type="email" id="email" placeholder="Your Email" required>
-           
-            <textarea id="message" placeholder="Your Message" required></textarea>
-             <button type="button" id="sendMessageBtn">Send Message</button>
-        </form>
-    </section>
+    <div class="contact-form">
+        <h2>Contact Us for Catering</h2>
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+        <button id="sendMessageBtn">Send Message</button>
+        <div class="message" id="messageDisplay"></div>
+    </div>
 
-    <footer>
+    <script>
+        // Function to send a message from the contact form via mailto link
+        function sendEmail() {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+
+            if (name.trim() !== '' && email.trim() !== '' && message.trim() !== '') {
+                var recipientEmail = 'afrospycekitchen@gmail.com';
+                var subject = 'Catering Inquiry from ' + name;
+                var body = `Name: ${name}\nEmail: ${email}\n\nMessage: ${message}`;
+                var mailtoLink = `mailto:${recipientEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                window.location.href = mailtoLink;
+            } else {
+                alert('Please fill out all fields before sending.');
+            }
+        }
+
+        // Event listener for the send button
+        document.getElementById("sendMessageBtn").addEventListener("click", sendEmail);
+    </script>
+</body>
+<footer>
         <p>&copy; 2024 Afrospyce Kitchen. All rights reserved.</p>
     </footer>
-</body>
 </html>
+    
+

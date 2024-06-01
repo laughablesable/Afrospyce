@@ -201,26 +201,43 @@
 			 <button onclick="sendOrder()">Checkout</button>
         </form> -->
        
-   <div class="contact-form"id="contact-form">
-        
-     <img src="placeholder1.JPG" alt="Catering Item 1">
+  <section class="cart-section">
+    <!-- Customer information form -->
+    <div class="checkout" id="checkout">
+      
         <input type="text" id="name" placeholder="Your Name" required>
         <input type="email" id="email" placeholder="Your Email" required>
-        <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+        <textarea id="message" rows="5" placeholder="Provide Payment Preference(Pay on delivery)" required></textarea>
         <button id="sendMessageBtn">Checkout</button>
         <div class="message" id="messageDisplay"></div>
     </div>
- </div>
-        <!-- Display selected items and total price -->
-        <div id="cart-summary"></div>
+    
+    <!-- Display selected items and total price -->
+    <div id="cart-summary"></div>
+</section>
 
-        <!-- Button to send order -->
-       
-    </section>
-    </section>
-    
-<!-- Cart section -->
-    
+<script>
+    // Function to send a message from the contact form via mailto link
+    function sendEmail() {
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var message = document.getElementById('message').value;
+        var cartSummary = document.getElementById('cart-summary').innerText;
+
+        if (name.trim() !== '' && email.trim() !== '' && message.trim() !== '') {
+            var recipientEmail = 'asoneye34@gmail.com';
+            var subject = 'Order from ' + name;
+            var body = `Name: ${name}\nEmail: ${email}\n\nMessage: ${message}\n\nCart Summary:\n${cartSummary}`;
+            var mailtoLink = `mailto:${afrospycekitchen@gmail.com}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            window.location.href = mailtoLink;
+        } else {
+            alert('Please fill out all fields before sending.');
+        }
+    }
+
+    // Event listener for the send button
+    document.getElementById("sendMessageBtn").addEventListener("click", sendEmail);
+</script>
 
     <footer>
         <p>&copy; 2024 Afrospyce Kitchen. All rights reserved.</p>

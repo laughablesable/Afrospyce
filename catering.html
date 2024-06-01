@@ -14,6 +14,11 @@
             height: 100vh;
             margin: 0;
             padding: 0;
+        display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #000;
         }
 .contact-box {
             min-height: 400px; /* Set a minimum height for the cart section */
@@ -22,13 +27,14 @@
             position: relative; /* Make the footer relative */
             z-index: -1; /* Ensure footer appears above other content */
         }
-        header {
-            background-color: #111;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-        }
+     
 
+        header, footer {
+            background-color: #000;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
         nav ul {
             list-style-type: none;
             padding: 0;

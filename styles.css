@@ -206,20 +206,8 @@ body.catering {
         touch-action: manipulation; /* Disable default touch interactions like zooming */
     }
 
-    body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-       
-        
-    }
+   
 
     /* Example of a centered container */
-    .container {
-        width: 100%;
-        max-width: 600px; /* Adjust as needed */
-        padding: 20px;
-        box-sizing: border-box;
-        
-    }
+   
 }

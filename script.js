@@ -5,7 +5,7 @@ function sendEmail() {
     const message = document.getElementById('message').value;
 
     if (name.trim() !== '' && email.trim() !== '' && message.trim() !== '') {
-        const recipientEmail = 'asoneye34@gmail.com';
+        const recipientEmail = 'afrospycekitchen@gmail.com';
         const subject = 'Message from Afrospyce Kitchen';
         const body = `Name: ${name}\nEmail: ${email}\n\nMessage: ${message}`;
         const mailtoLink = `mailto:${recipientEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
@@ -172,7 +172,7 @@ function sendOrder() {
         'Order Summary:\n' + items;
 
     // Construct mailto link
-    var mailtoLink = 'mailto:your-email@example.com' +
+    var mailtoLink = 'mailto:afrospycekitchen@gmail.com' +
         '?subject=' + encodeURIComponent(subject) +
         '&body=' + encodeURIComponent(body);
 
